@@ -32,7 +32,7 @@ if not st.session_state.expenses.empty:
 
   st.subheader("Summary") 
   total_spent=st.session_state.expenses['Amount'].sum()
-  st.write(f"Total Spent:${total_spent:.2f})
+  st.write(f"Total Spent:${total_spent:.2f}")
 
   category_totals=st.session_state.expenses.groupby('Category')['Amount'].sum()
   
