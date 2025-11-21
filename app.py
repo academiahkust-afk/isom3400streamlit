@@ -1,4 +1,5 @@
 import streamlit as st
+import time
 
 st.title("Business Dashboard with Streamlit Layouts")
 st.write("## Objective: To demonstrate the usage of columns, tabs, and dynamic containers in a business dashboard.")
@@ -50,3 +51,13 @@ with tab3:
 with st.expander("More Information"):
     st.write("Additional details on data collection methods.")
     st.write("Data was collected through surveys and sales reports.")
+
+placeholder = st.empty()
+
+# Simulate loading data and updating the placeholder
+for i in range(5):
+    placeholder.write(f"Loading data... {i*20}% complete")
+    time.sleep(1)
+
+# Once loading is complete, display the final message
+placeholder.write("Data loading complete. Displaying business insights.")
