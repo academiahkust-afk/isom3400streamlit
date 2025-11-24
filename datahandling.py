@@ -20,6 +20,8 @@ data = {'Product':['A','B','C'],
         'Customers':[300,400,350]}
 
 df2=pd.DataFrame(data)
-st.dataframe(df2)
-st.data_editor(df2)
-st.table(df2)
+st.dataframe(df2)                        #Interactive table
+st.data_editor(df2)                        #Editable table
+st.table(df2)                                #Static table // Table and dataframe are different 
+
+st.dataframe(df.style.format({'Sales':'${:,0f}','Customers':'{:,0f}'}))
