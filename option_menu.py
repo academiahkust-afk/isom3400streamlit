@@ -6,7 +6,7 @@ st.title('Hello, Students!')
 st.write('This is your Python Programming course.')
 
 with st.sidebar:
-    selected=option_menu(
+    selected=option_menu(                #Selected is the option_menu object 
         menu_title = "Menu",
         options = ["Home", "About", "Contact"],
         icons = ["house","cloud-upload","list-task"],
@@ -16,7 +16,7 @@ with st.sidebar:
         menu_icon= "emoji-smile-fill",
         default_index=0,
     )
-
+#Handling the interactions
 if selected == "Home":
     st.title(f"Welcome to the {selected} page.")
 
