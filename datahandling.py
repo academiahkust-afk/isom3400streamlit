@@ -21,5 +21,5 @@ data = {'Product':['A','B','C'],
 
 df2=pd.DataFrame(data)
 st.dataframe(df2)
-st.dataeditor(df2)
+st.data_editor(df2)
 st.table(df2)
