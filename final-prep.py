@@ -42,3 +42,13 @@ if st.button("Calculate"):
     result=(num1/num2) if num2!=0 else st.write("Cannot divide by 0")
 
 st.success(f"Result: {result}")
+
+st.header("Retail Business Dashboard")
+st.subheader("Manager Input Section")
+st.write(Please enter the monhtly sales target and select the region.")
+
+sales_target=st.number_input("Enter monthly sales target (in USD)")
+region=st.selectbox("Select region",["North","South","East","West"])
+
+if st.button("Submit"):
+  st.success(f"Sales Target = {sales_target} set for {region} Region."
