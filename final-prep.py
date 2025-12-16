@@ -24,3 +24,21 @@ sales_threshold = st.slider("Sales threshold", 100, 500, 300)
 filtered_data = df[df['sales'] >= sales_threshold]
 st.write(f"Months with sales above {sales_threshold}")
 st.write(filtered_data)
+
+
+num1=st.number_input("Enter the first number: ") 
+num2=st.number_input("Enter the second number: ") 
+
+operation=st.select_box("Select the operation:",["Add","Subtract","Multiply","Divide"])
+
+if st.button("Calculate"):
+  if operation=="Add":
+    result=(num1+num2)
+  if operation=="Subtract":
+    result=(num1-num2)
+  if operation=="Multiply":
+    result=(num1*num2)
+  if operation=="Divide":
+    result=(num1/num2) if num2!=0 else: st.write("Cannot divide by 0")
+
+st.success(f"Result: {result}")
