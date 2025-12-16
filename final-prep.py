@@ -45,7 +45,7 @@ st.success(f"Result: {result}")
 
 st.header("Retail Business Dashboard")
 st.subheader("Manager Input Section")
-st.write(Please enter the monhtly sales target and select the region.")
+st.write("Please enter the monhtly sales target and select the region.")
 
 sales_target=st.number_input("Enter monthly sales target (in USD)")
 region=st.selectbox("Select region",["North","South","East","West"])
