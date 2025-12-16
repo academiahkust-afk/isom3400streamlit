@@ -39,6 +39,6 @@ if st.button("Calculate"):
   if operation=="Multiply":
     result=(num1*num2)
   if operation=="Divide":
-    result=(num1/num2) if num2!=0 else: st.write("Cannot divide by 0")
+    result=(num1/num2) if num2!=0 else st.write("Cannot divide by 0")
 
 st.success(f"Result: {result}")
