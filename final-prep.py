@@ -40,8 +40,7 @@ if st.button("Calculate"):
     result=(num1*num2)
   if operation=="Divide":
     result=(num1/num2) if num2!=0 else st.write("Cannot divide by 0")
-
-st.success(f"Result: {result}")
+  st.success(f"Result: {result}")
 
 st.header("Retail Business Dashboard")
 st.subheader("Manager Input Section")
