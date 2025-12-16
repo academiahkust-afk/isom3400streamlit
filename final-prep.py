@@ -29,7 +29,7 @@ st.write(filtered_data)
 num1=st.number_input("Enter the first number: ") 
 num2=st.number_input("Enter the second number: ") 
 
-operation=st.select_box("Select the operation:",["Add","Subtract","Multiply","Divide"])
+operation=st.selectbox("Select the operation:",["Add","Subtract","Multiply","Divide"])
 
 if st.button("Calculate"):
   if operation=="Add":
