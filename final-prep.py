@@ -51,4 +51,4 @@ sales_target=st.number_input("Enter monthly sales target (in USD)")
 region=st.selectbox("Select region",["North","South","East","West"])
 
 if st.button("Submit"):
-  st.success(f"Sales Target = {sales_target} set for {region} Region."
+  st.success(f"Sales Target = {sales_target} set for {region} Region.")
