@@ -1,5 +1,7 @@
 import streamlit as st
-import time
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 '''
 st.title("Business Dashboard with Streamlit Layouts")
 st.write("## Objective: To demonstrate the usage of columns, tabs, and dynamic containers in a business dashboard.")
