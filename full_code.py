@@ -11,5 +11,6 @@ with st.sidebar:
     menu_title="title",
     options=["Home","Customer Feedback","Market Insight"],
     icons=["1-circle-fill","2-circle-fill","3-circle-fill"],
-    default_index=0)
+    default_index=0,
+  )
   
