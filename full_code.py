@@ -9,9 +9,35 @@ st.write("Practicing using Streamlit Functions to create an interactive Web App"
 
 with st.sidebar:
   selected=option_menu(
-    menu_title="title",
+    menu_title="Menu",
     options=["Home","Customer Feedback","Market Insight"],
     icons=["1-circle-fill","2-circle-fill","3-circle-fill"],
     default_index=0,
   )
-  
+
+if selected=="Home":
+  tab1,tab2,tab3,tab4=st.tabs(["Q1 2025","Q2 2025","Q3 2025","Q4 2025"])
+
+  with tab1:
+    st.write("###Revenue:")
+    st.write("$1.5M")
+    st.write("###Net Income:")
+    st.write("$0.9M")
+
+  with tab2:
+    st.write("###Revenue:")
+    st.write("$2.5M")
+    st.write("###Net Income:")
+    st.write("$1.2M")
+
+  with tab3:
+    st.write("###Revenue:")
+    st.write("$2.2M")
+    st.write("###Net Income:")
+    st.write("$1.4M")
+
+  with tab4:
+    st.write("###Revenue:")
+    st.write("$2.7M")
+    st.write("###Net Income:")
+    st.write("$1.7M")
