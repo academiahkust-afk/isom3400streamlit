@@ -52,3 +52,17 @@ if selected =="Customer Feedback":
   if submit_button:
     st.success("Feedback Submitted")
     st.write(f"Feedback about {product} purchased at ${price}: {feedback}")
+
+if selected=="Market Insight":
+  products=["Shoes","T-shirts","Tops","Dresses","Jeans"]
+  sales_nums=np.random.rand(7)*10000
+  customers=np.random.randint(10000)
+
+  sales_data=pd.DataFrame({
+    "Products":products,
+    "Sales":sales_nums,
+    "Customers:customers
+  })
+
+  st.bar_chart(sales_data,x="Products",y="Sales")
+  
