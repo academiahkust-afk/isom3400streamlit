@@ -61,7 +61,7 @@ if selected=="Market Insight":
   sales_data=pd.DataFrame({
     "Products":products,
     "Sales":sales_nums,
-    "Customers:customers
+    "Customers":customers
   })
 
   st.bar_chart(sales_data,x="Products",y="Sales")
