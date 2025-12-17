@@ -60,6 +60,7 @@ with st.form(key="Customer_Feedback_Form"):
   submit_button = st.form_submit_button("Submit Feedback")
 
 if submit_button:
+  st.success("Thanks for your feedback")
   st.write("### Submitted Feedback")
   st.write(f"**Product:** {product_choice}")
   st.write(f"**Sales Range:** {sales_range}")
