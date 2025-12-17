@@ -46,7 +46,7 @@ if selected =="Customer Feedback":
   with st.form(key="feedback_form"):
     product=st.text_input("Enter Product ID: ")
     feedback=st.text_area("Enter Feedback: ")
-    price=st.slider("Enter the price paid: ",min_value=0,max_value=10000)
+    price=st.slider("Enter the price paid: ",0,10000,500)
     submit_button=st.form_submit_button('Submit Feedback')
 
   if submit_button:
