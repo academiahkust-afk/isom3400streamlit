@@ -51,3 +51,17 @@ region=st.selectbox("Select region",["North","South","East","West"])
 
 if st.button("Submit"):
   st.success(f"Sales Target = {sales_target} set for {region} Region.")
+
+st.form(key="Customer_Feedback_Form"):
+  st.subheader("Customer Feedback Form")
+  st.product_id = st.text_input("Enter Product ID")
+  feedback = st.text_area("Enter your feedback")
+  sales_range = st.slider("Select Sales Range", min_value=0, max_value=1500, value=(500, 1000))
+  submit_button = st.form_submit_button("Submit Feedback")
+
+if submit_button:
+  st.write("### Submitted Feedback")
+  st.write(f"**Product:** {product_choice}")
+  st.write(f"**Sales Range:** {sales_range}")
+  st.write(f"**Product ID:** {product_id}")
+  st.write(f"**Feedback:** {feedback}")
