@@ -52,7 +52,7 @@ region=st.selectbox("Select region",["North","South","East","West"])
 if st.button("Submit"):
   st.success(f"Sales Target = {sales_target} set for {region} Region.")
 
-st.form(key="Customer_Feedback_Form"):
+with st.form(key="Customer_Feedback_Form"):
   st.subheader("Customer Feedback Form")
   st.product_id = st.text_input("Enter Product ID")
   feedback = st.text_area("Enter your feedback")
