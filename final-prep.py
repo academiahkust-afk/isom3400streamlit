@@ -63,5 +63,5 @@ if submit_button:
   st.success("Thanks for your feedback")
   st.write("### Submitted Feedback")
   st.write(f"**Sales Range:** {sales_range}")
-  st.write(f"**Product ID:** {product_id}")
+  st.write(f"**Product ID:** {st.product_id}")
   st.write(f"**Feedback:** {feedback}")
