@@ -54,9 +54,9 @@ if selected =="Customer Feedback":
     st.write(f"Feedback about {product} purchased at ${price}: {feedback}")
 
 if selected=="Market Insight":
-  products=["Shoes","T-shirts","Tops","Dresses","Jeans"]
+  products=["Shoes","T-shirts","Tops","Dresses","Jeans","Pants","Jumpsuits"]
   sales_nums=np.random.rand(7)*10000
-  customers=np.random.randint(10000)
+  customers=np.random.randint(10000,size=7)
 
   sales_data=pd.DataFrame({
     "Products":products,
