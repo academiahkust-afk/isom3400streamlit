@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from streamlit_option_menu import option_menu
 
 st.header("ISOM3400: Business Dashboard")
 st.write("Practicing using Streamlit Functions to create an interactive Web App")
