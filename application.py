@@ -3,69 +3,42 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-# -------------------------------
-# Title and Description
-# -------------------------------
-st.title("📊 Business Sales Dashboard")
-st.write("Analyze monthly sales data interactively!")
 
-# -------------------------------
-# Sample Data
-# -------------------------------
-months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-sales = np.random.randint(5000, 20000, size=12)
-expenses = np.random.randint(3000, 15000, size=12)
 
-data = pd.DataFrame({
-    "Month": months,
-    "Sales": sales,
-    "Expenses": expenses
+# Step 3: Generate Random Sales Data
+sales_data = np.random.rand(100) * 1000
+
+# Step 4: Create a DataFrame
+products = ['Product A', 'Product B', 'Product C', 'Product D', 'Product E']
+sales = np.random.rand(5) * 1000
+sales2=[55000,28282,9292,83844],77392]
+customers = np.random.randint(1, 100, size=5)
+
+df = pd.DataFrame({
+    'Product': products,
+    'Sales': sales,
+    'Customers': customers
 })
 
-# -------------------------------
-# Sidebar Filters
-# -------------------------------
-st.sidebar.header("Filters")
-selected_months = st.sidebar.multiselect("Select Months", months, default=months)
-show_expenses = st.sidebar.checkbox("Show Expenses", value=True)
+# Step 5: Visualize Sales Data
 
-# Filter data
-filtered_data = data[data["Month"].isin(selected_months)]
+# Display DataFrame using st.dataframe
+st.markdown("### Product Sales and Customer Data")
+st.dataframe(df)  # Interactive table with sorting and resizing
 
-# -------------------------------
-# Display Data Table
-# -------------------------------
-st.subheader("Filtered Data")
-st.dataframe(filtered_data)
+# Line Chart - Sales Over Time
+st.markdown("### Sales Over Time")
+st.line_chart(sales_data)
+st.bar_chart(sales2)
 
-# -------------------------------
-# Interactive Chart
-# -------------------------------
-st.subheader("Sales Chart")
-fig, ax = plt.subplots()
-ax.plot(filtered_data["Month"], filtered_data["Sales"], marker='o', label="Sales")
-if show_expenses:
-    ax.plot(filtered_data["Month"], filtered_data["Expenses"], marker='o', label="Expenses")
-ax.set_title("Monthly Performance")
-ax.set_xlabel("Month")
-ax.set_ylabel("Amount ($)")
-ax.legend()
-st.pyplot(fig)
+# Area Chart - Cumulative Sales
+st.markdown("### Cumulative Sales")
+st.area_chart(sales_data)
 
-# -------------------------------
-# KPI Metrics
-# -------------------------------
-st.subheader("Key Metrics")
-col1, col2, col3 = st.columns(3)
-col1.metric("Total Sales", f"${filtered_data['Sales'].sum():,.0f}")
-col2.metric("Total Expenses", f"${filtered_data['Expenses'].sum():,.0f}")
-col3.metric("Profit", f"${(filtered_data['Sales'].sum() - filtered_data['Expenses'].sum()):,.0f}")
+# Bar Chart - Sales by Product
+st.markdown("### Sales by Product")
+st.bar_chart(df[['Product', 'Sales']].set_index('Product'))
 
-
-st.title("Retail Business Dashboard")
-st.header("Manager Input Section")
-st.write("Please enter the monhtly sales target and select the region.")
-
-target= st.number_input("Enter Monthly Sales Target (in USD):",value=50000,min_value=0)
-
-
+# Scatter Chart - Customer Engagement by Product
+st.markdown("### Customer Engagement by Product")
+st.scatter_chart(df[['Product', 'Customers']].set_index('Product'))
